@@ -6,6 +6,9 @@ const app = express()
 // cors agar support web Xixi:)
 app.use(cors())
 
+// Assets
+app.use('/', express.static(__path + '/views/assets'))
+
 // Api fitur
 app.get('/api/:path/:file', (req, res) => {
     const path = req.params.path
